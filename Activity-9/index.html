@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Activity 9: Contact Form Validation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Activity 9: Contact Form Validation</h1>
+    <p>Open the browser console (F12) to see form handling demonstrations!</p>
+
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Contact Us</h2>
+        <p>Please fill out all required fields. Validation happens in real-time!</p>
+      </div>
+
+      <form id="contactForm" class="contact-form" novalidate>
+        
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+          <div class="error-message" id="nameError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+          <div class="error-message" id="emailError"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" placeholder="Minimum 10 characters..." required></textarea>
+          <div class="error-message" id="messageError"></div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submitBtn" class="submit-btn" disabled>
+            Send Message
+          </button>
+        </div>
+
+        <div class="form-status">
+          <div id="formSuccess" class="success-status hidden">
+            <span>✅ Thank you! Your message has been sent successfully.</span>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
